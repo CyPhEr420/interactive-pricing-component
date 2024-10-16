@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <!-- Simple, traffic-based pricing Sign-up for our 30-day trial. No credit card
+    required. Pageviews $ /month Monthly Billing Yearly Billing 25% discount
+    Unlimited websites 100% data ownership Email reports Start my trial -->
+    <div class="heading">
+      <h1>Simple, traffic-based pricing</h1>
+      <h2>Sign-up for our 30-day trial. No credit card required.</h2>
+    </div>
+    <div class="pricing-container">
+      <div class="pricing-top-container">
+        <div class="pricing-info">
+          <p class="product-value">100k pageviews</p>
+          <h1 class="pricing">$16.00 <span>/month</span></h1>
+        </div>
+
+        <input class="slider" type="range" min="0" max="4" value="1" step="1" />
+
+        <div class="toggle-container">
+          <p>Montly Billing</p>
+          <div class="toggle-switch">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="toggle-label"></label>
+          </div>
+          <p>Yearly Billing</p>
+          <p class="discount">25% discount</p>
+        </div>
+      </div>
+
+      <div class="features-container">
+        <div class="features">
+          <div class="feature">
+            <img src="./images/icon-check.svg" alt="tick" />
+            <p>Unlimited websites</p>
+          </div>
+          <div class="feature">
+            <img src="./images/icon-check.svg" alt="tick" />
+            <p>100% data ownership</p>
+          </div>
+          <div class="feature">
+            <img src="./images/icon-check.svg" alt="tick" />
+            <p>Email reports</p>
+          </div>
+        </div>
+        <button class="start-btn">Start my trail</button>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
