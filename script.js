@@ -2,6 +2,7 @@ const slider = document.querySelector(".slider");
 const productValueElement = document.querySelector(".product-value");
 const prizeElement = document.querySelector(".pricing");
 const toggleCheckbox = document.getElementById("toggle");
+const discountText = document.querySelector(".discount");
 const sliderValues = {
   0: { prize: 8, value: 10 },
   1: { prize: 12, value: 50 },
@@ -36,4 +37,16 @@ toggleCheckbox.addEventListener("change", () => {
   changePricing();
 });
 
+function changeDiscountText() {
+  if (window.innerWidth < 700) {
+    discountText.textContent = "-25%";
+  } else {
+    discountText.textContent = "25% discount";
+  }
+}
+
+window.addEventListener("resize", changeDiscountText);
+window.addEventListener("orientationchange", changeDiscountText);
+
 changePricing();
+changeDiscountText();
